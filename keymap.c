@@ -1,21 +1,28 @@
 #include "atreus62.h"
 
-#define _DEFAULT 0
-#define _SYMB 1
-#define _TMUX 2
+// Layers
+enum {
+  _DEFAULT,
+  _SYMB,
+  _TMUX
+};
 
-#define M_TMUX_1 M(1)
-#define M_TMUX_2 M(2)
-#define M_TMUX_3 M(3)
-#define M_TMUX_4 M(4)
-#define M_TMUX_5 M(5)
-#define M_TMUX_COPY_MODE M(6)
-#define M_TMUX_SP M(7)
-#define M_TMUX_VS M(8)
-#define M_TMUX_NEW M(9)
-#define M_TMUX_ZOOM M(10)
-#define M_TMUX_SHOW_CURRENT_STORY M(11)
+// Macros
+enum {
+  M_TMUX_1,
+  M_TMUX_2,
+  M_TMUX_3,
+  M_TMUX_4,
+  M_TMUX_5,
+  M_TMUX_COPY_MODE,
+  M_TMUX_SP,
+  M_TMUX_VS,
+  M_TMUX_NEW,
+  M_TMUX_ZOOM,
+  M_TMUX_SHOW_CURRENT_STORY
+};
 
+// Tap dances
 enum {
   TD_SPACE
 };
@@ -48,11 +55,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 },
 
 [_TMUX] = {
-  { KC_TRNS, KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,    KC_TRNS,  NO_KEY,      KC_TRNS, KC_TRNS,                   KC_TRNS, KC_TRNS,   KC_TRNS,   KC_TRNS },
-  { KC_TRNS, KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,    KC_TRNS,  NO_KEY,      KC_TRNS, KC_TRNS,                   KC_TRNS, KC_TRNS,   KC_TRNS,   KC_TRNS },
-  { KC_TRNS, M_TMUX_1, M_TMUX_2, M_TMUX_3, M_TMUX_4,   M_TMUX_5, NO_KEY,      KC_TRNS, M_TMUX_COPY_MODE,          KC_TRNS, M_TMUX_VS, M_TMUX_SP, KC_TRNS },
-  { KC_TRNS, KC_TRNS,  KC_TRNS,  KC_TRNS,  TERM_PASTE, KC_TRNS,  M_TMUX_NEW,  KC_TRNS, M_TMUX_SHOW_CURRENT_STORY, KC_TRNS, KC_TRNS,   KC_TRNS,   KC_TRNS },
-  { KC_TRNS, KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,    KC_TRNS,  M_TMUX_ZOOM, KC_TRNS, KC_TRNS,                   KC_TRNS, KC_TRNS,   KC_TRNS,   KC_TRNS }
+  { KC_TRNS, KC_TRNS,     KC_TRNS,     KC_TRNS,     KC_TRNS,      KC_TRNS,     NO_KEY,         KC_TRNS, KC_TRNS,                      KC_TRNS, KC_TRNS,      KC_TRNS,      KC_TRNS },
+  { KC_TRNS, KC_TRNS,     KC_TRNS,     KC_TRNS,     KC_TRNS,      KC_TRNS,     NO_KEY,         KC_TRNS, KC_TRNS,                      KC_TRNS, KC_TRNS,      KC_TRNS,      KC_TRNS },
+  { KC_TRNS, M(M_TMUX_1), M(M_TMUX_2), M(M_TMUX_3), M(M_TMUX_4),  M(M_TMUX_5), NO_KEY,         KC_TRNS, M(M_TMUX_COPY_MODE),          KC_TRNS, M(M_TMUX_VS), M(M_TMUX_SP), KC_TRNS },
+  { KC_TRNS, KC_TRNS,     KC_TRNS,     KC_TRNS,     TERM_PASTE,   KC_TRNS,     M(M_TMUX_NEW),  KC_TRNS, M(M_TMUX_SHOW_CURRENT_STORY), KC_TRNS, KC_TRNS,      KC_TRNS,      KC_TRNS },
+  { KC_TRNS, KC_TRNS,     KC_TRNS,     KC_TRNS,     KC_TRNS,      KC_TRNS,     M(M_TMUX_ZOOM), KC_TRNS, KC_TRNS,                      KC_TRNS, KC_TRNS,      KC_TRNS,      KC_TRNS }
 }
 
 /*
@@ -87,47 +94,17 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
 {
   // MACRODOWN only works in this function
   switch (id) {
-  case 0:
-    if (record->event.pressed) {
-      register_code(KC_RSFT);
-    }
-    else {
-      unregister_code(KC_RSFT);
-    }
-    break;
-  case 1:
-    do_tmux_key(record, KC_1, KC_NO);
-    break;
-  case 2:
-    do_tmux_key(record, KC_2, KC_NO);
-    break;
-  case 3:
-    do_tmux_key(record, KC_3, KC_NO);
-    break;
-  case 4:
-    do_tmux_key(record, KC_4, KC_NO);
-    break;
-  case 5:
-    do_tmux_key(record, KC_5, KC_NO);
-    break;
-  case 6:
-    do_tmux_key(record, KC_LBRC, KC_NO);
-    break;
-  case 7:
-    do_tmux_key(record, KC_QUOT, KC_LSFT);
-    break;
-  case 8:
-    do_tmux_key(record, KC_5, KC_LSFT);
-    break;
-  case 9:
-    do_tmux_key(record, KC_C, KC_NO);
-    break;
-  case 10:
-    do_tmux_key(record, KC_Z, KC_NO);
-    break;
-  case 11:
-    do_tmux_key(record, KC_J, KC_NO);
-    break;
+    case M_TMUX_1: do_tmux_key(record, KC_1, KC_NO); break;
+    case M_TMUX_2: do_tmux_key(record, KC_2, KC_NO); break;
+    case M_TMUX_3: do_tmux_key(record, KC_3, KC_NO); break;
+    case M_TMUX_4: do_tmux_key(record, KC_4, KC_NO); break;
+    case M_TMUX_5: do_tmux_key(record, KC_5, KC_NO); break;
+    case M_TMUX_COPY_MODE: do_tmux_key(record, KC_LBRC, KC_NO); break;
+    case M_TMUX_SP: do_tmux_key(record, KC_QUOT, KC_LSFT); break;
+    case M_TMUX_VS: do_tmux_key(record, KC_5, KC_LSFT); break;
+    case M_TMUX_NEW: do_tmux_key(record, KC_C, KC_NO); break;
+    case M_TMUX_ZOOM: do_tmux_key(record, KC_Z, KC_NO); break;
+    case M_TMUX_SHOW_CURRENT_STORY: do_tmux_key(record, KC_J, KC_NO); break;
   }
   return MACRO_NONE;
 };
