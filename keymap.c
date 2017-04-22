@@ -66,12 +66,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 */
 };
 
-
-void do_tap_dance (qk_tap_dance_state_t *state) {
-  switch (state->keycode) {
-  }
-}
-
 qk_tap_dance_action_t tap_dance_actions[] = {
   [TD_SPACE] = ACTION_TAP_DANCE_DOUBLE(KC_SPC, KC_UNDERSCORE)
 };
