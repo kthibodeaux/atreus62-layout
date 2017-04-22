@@ -83,8 +83,6 @@ void do_tmux_key(keyrecord_t *record, uint8_t code, uint8_t modifier) {
   }
 }
 
-const uint16_t PROGMEM fn_actions[] = { };
-
 const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
 {
   // MACRODOWN only works in this function
