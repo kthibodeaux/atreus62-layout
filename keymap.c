@@ -27,11 +27,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 },
 
 [_TMUX] = {
-  { KC_TRNS, KC_TRNS,     KC_TRNS,     KC_TRNS,            KC_TRNS,          KC_TRNS,              NO_KEY,         KC_TRNS, KC_TRNS,                      KC_TRNS, KC_TRNS,      KC_TRNS,      KC_TRNS },
-  { KC_TRNS, KC_TRNS,     KC_TRNS,     M(M_TMUX_JOIN_V),   M(M_TMUX_JOIN_H), KC_TRNS,              NO_KEY,         KC_TRNS, KC_TRNS,                      KC_TRNS, KC_TRNS,      KC_TRNS,      KC_TRNS },
-  { KC_TRNS, M(M_TMUX_1), M(M_TMUX_2), M(M_TMUX_3),        M(M_TMUX_4),      M(M_TMUX_5),          NO_KEY,         KC_TRNS, M(M_TMUX_COPY_MODE),          KC_TRNS, M(M_TMUX_VS), M(M_TMUX_SP), KC_TRNS },
-  { KC_TRNS, KC_TRNS,     KC_TRNS,     M(M_TMUX_OPEN_URL), TERM_PASTE,       M(M_TMUX_BREAK_PANE), M(M_TMUX_NEW),  KC_TRNS, M(M_TMUX_SHOW_CURRENT_STORY), KC_TRNS, KC_TRNS,      KC_TRNS,      KC_TRNS },
-  { KC_TRNS, KC_TRNS,     KC_TRNS,     KC_TRNS,            KC_TRNS,          KC_TRNS,              M(M_TMUX_ZOOM), KC_TRNS, KC_TRNS,                      KC_TRNS, KC_TRNS,      KC_TRNS,      KC_TRNS }
+  { KC_TRNS, KC_TRNS,     KC_TRNS,     KC_TRNS,            KC_TRNS,          KC_TRNS,              NO_KEY,         KC_TRNS,               KC_TRNS,                      KC_TRNS, KC_TRNS,      KC_TRNS,      KC_TRNS },
+  { KC_TRNS, KC_TRNS,     KC_TRNS,     M(M_TMUX_JOIN_V),   M(M_TMUX_JOIN_H), KC_TRNS,              NO_KEY,         KC_TRNS,               KC_TRNS,                      KC_TRNS, KC_TRNS,      KC_TRNS,      KC_TRNS },
+  { KC_TRNS, M(M_TMUX_1), M(M_TMUX_2), M(M_TMUX_3),        M(M_TMUX_4),      M(M_TMUX_5),          NO_KEY,         KC_TRNS,               M(M_TMUX_COPY_MODE),          KC_TRNS, M(M_TMUX_VS), M(M_TMUX_SP), KC_TRNS },
+  { KC_TRNS, KC_TRNS,     KC_TRNS,     M(M_TMUX_OPEN_URL), TERM_PASTE,       M(M_TMUX_BREAK_PANE), M(M_TMUX_NEW),  KC_TRNS,               M(M_TMUX_SHOW_CURRENT_STORY), KC_TRNS, KC_TRNS,      KC_TRNS,      KC_TRNS },
+  { KC_TRNS, KC_TRNS,     KC_TRNS,     KC_TRNS,            KC_TRNS,          KC_TRNS,              M(M_TMUX_ZOOM), M_TMUX_FINGERS_PLUGIN, KC_TRNS,                      KC_TRNS, KC_TRNS,      KC_TRNS,      KC_TRNS }
 },
 
 [_NUM] = {
