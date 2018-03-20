@@ -11,11 +11,11 @@ enum {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_DEFAULT] = {
-  { KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,   NO_KEY,  KC_6,   KC_7,      KC_8,    KC_9,    KC_0,    KC_TRNS },
-  { KC_DELT, KC_Q,    KC_W,    KC_F,    KC_P,    KC_G,   NO_KEY,  KC_J,   KC_L,      KC_U,    KC_Y,    KC_SCLN, KC_BSLS },
-  { KC_TAB,  MY_A,    MY_R,    MY_S,    MY_T,    KC_D,   NO_KEY,  KC_H,   MY_N,      MY_E,    MY_I,    MY_O,    KC_TRNS },
-  { KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,   KC_BSPC, KC_K,   KC_M,      KC_COMM, KC_DOT,  KC_SLSH, KC_LSFT },
-  { KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, MY_SPC, KC_TRNS, KC_ENT, MO(_SYMB), KC_LEFT, KC_UP,   KC_DOWN, KC_RIGHT }
+  { KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,     KC_5,   NO_KEY,  KC_6,   KC_7,      KC_8,    KC_9,    KC_0,    KC_TRNS },
+  { KC_DELT, KC_Q,    KC_W,    KC_F,    KC_P,     KC_G,   NO_KEY,  KC_J,   KC_L,      KC_U,    KC_Y,    KC_SCLN, KC_BSLS },
+  { KC_TAB,  MY_A,    MY_R,    KC_S,    MY_T,     KC_D,   NO_KEY,  KC_H,   MY_N,      MY_E,    MY_I,    MY_O,    KC_TRNS },
+  { KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,     KC_B,   KC_BSPC, KC_K,   KC_M,      KC_COMM, KC_DOT,  KC_SLSH, KC_LSFT },
+  { KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, MO(_NUM), MY_SPC, KC_TRNS, KC_ENT, MO(_SYMB), KC_LEFT, KC_UP,   KC_DOWN, KC_RIGHT }
 },
 
 [_SYMB] = {
@@ -36,9 +36,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_NUM] = {
   { KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, NO_KEY,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS },
-  { KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, NO_KEY,  KC_TRNS, KC_7,    KC_8,    KC_9, KC_TRNS, KC_TRNS },
-  { KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, NO_KEY,  KC_TRNS, KC_4,    KC_5,    KC_6, KC_TRNS, KC_TRNS },
-  { KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_DOT,  KC_1,    KC_2,    KC_3, KC_TRNS, KC_TRNS },
+  { KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, NO_KEY,  KC_TRNS, KC_TRNS,    KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS },
+  { KC_TRNS, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    NO_KEY,  KC_6,    KC_7,    KC_8,    KC_9, KC_0,    KC_TRNS },
+  { KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS,    KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS },
   { KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_0,    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS }
 },
 
