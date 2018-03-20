@@ -36,9 +36,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_NUM] = {
   { KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, NO_KEY,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS },
-  { KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, NO_KEY,  KC_TRNS, KC_TRNS,    KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS },
-  { KC_TRNS, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    NO_KEY,  KC_6,    KC_7,    KC_8,    KC_9, KC_0,    KC_TRNS },
-  { KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS,    KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS },
+  { KC_TRNS, I3_1,    I3_2,    I3_3,    I3_4,    I3_5,    NO_KEY,  I3_6,    I3_7,    I3_8,    I3_9,    I3_0,    KC_TRNS },
+  { KC_TRNS, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    NO_KEY,  KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_TRNS },
+  { KC_TRNS, I3M_1,   I3M_2,   I3M_3,   I3M_4,   I3M_5,   NO_KEY,  I3M_6,   I3M_7,   I3M_8,   I3M_9,   I3M_0,   KC_TRNS },
   { KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_0,    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS }
 },
 
